@@ -114,7 +114,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __exte
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__,exports,__webpack_require__(/*! ./kernel */ \"./src/lib/externalJS/kernel.js\"),__webpack_require__(/*! ./context */ \"./src/lib/externalJS/context.js\")], __WEBPACK_AMD_DEFINE_RESULT__ = (function(e,t,n,r){\"use strict\";Object.defineProperty(t,\"__esModule\",{value:!0}),t.kernel=n,t.context=r}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n\n//# sourceURL=webpack:///./src/lib/externalJS/index.js?");
+eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__,exports,__webpack_require__(/*! ./kernel */ \"./src/lib/externalJS/kernel.js\"),__webpack_require__(/*! ./context */ \"./src/lib/externalJS/context.js\"),__webpack_require__(/*! ./lib/index */ \"./src/lib/externalJS/lib/index.js\")], __WEBPACK_AMD_DEFINE_RESULT__ = (function(e,t,i,n,r){\"use strict\";Object.defineProperty(t,\"__esModule\",{value:!0}),t.kernel=i,t.context=n,t.sublib=r.sublib}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n\n//# sourceURL=webpack:///./src/lib/externalJS/index.js?");
 
 /***/ }),
 
@@ -129,6 +129,28 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPAC
 
 /***/ }),
 
+/***/ "./src/lib/externalJS/lib/index.js":
+/*!*****************************************!*\
+  !*** ./src/lib/externalJS/lib/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(/*! ./sub */ \"./src/lib/externalJS/lib/sub.js\")], __WEBPACK_AMD_DEFINE_RESULT__ = (function (require, exports, sublib) {\r\n    \"use strict\";\r\n    Object.defineProperty(exports, \"__esModule\", { value: true });\r\n    exports.sublib = sublib;\r\n}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\r\n//# sourceMappingURL=index.js.map\n\n//# sourceURL=webpack:///./src/lib/externalJS/lib/index.js?");
+
+/***/ }),
+
+/***/ "./src/lib/externalJS/lib/sub.js":
+/*!***************************************!*\
+  !*** ./src/lib/externalJS/lib/sub.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_RESULT__ = (function (require, exports) {\r\n    \"use strict\";\r\n    Object.defineProperty(exports, \"__esModule\", { value: true });\r\n    function test() {\r\n        return \"Hi, this is Sub\";\r\n    }\r\n    exports.test = test;\r\n    var myvar = \"Hello, hello!\";\r\n    function getMyvar() {\r\n        return myvar;\r\n    }\r\n    exports.getMyvar = getMyvar;\r\n    function setMyvar(s) {\r\n        myvar = s;\r\n    }\r\n    exports.setMyvar = setMyvar;\r\n}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\r\n//# sourceMappingURL=sub.js.map\n\n//# sourceURL=webpack:///./src/lib/externalJS/lib/sub.js?");
+
+/***/ }),
+
 /***/ "./src/main.ts":
 /*!*********************!*\
   !*** ./src/main.ts ***!
@@ -137,7 +159,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPAC
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\n    result[\"default\"] = mod;\n    return result;\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar aid = __importStar(__webpack_require__(/*! ./lib/externalJS/index */ \"./src/lib/externalJS/index.js\"));\nvar inst = new aid.context.cc(\"typescript\");\ndocument.writeln(inst.say());\nconsole.log(inst.say2());\nconsole.log(aid);\n\n\n//# sourceURL=webpack:///./src/main.ts?");
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar aid = __importStar(__webpack_require__(/*! ./lib/externalJS/index */ \"./src/lib/externalJS/index.js\"));\r\nvar inst = new aid.context.cc(\"typescript\");\r\ndocument.writeln(inst.say());\r\nconsole.log(inst.say2());\r\nconsole.log(aid);\r\nconsole.log(aid.sublib.test());\r\nconsole.log(aid.sublib.getMyvar());\r\naid.sublib.setMyvar(\"Ni hao.\");\r\nconsole.log(aid.sublib.getMyvar());\r\n\n\n//# sourceURL=webpack:///./src/main.ts?");
 
 /***/ })
 
